@@ -1,0 +1,217 @@
+/* ---------------------------------
+   Coach
+--------------------------------- */
+
+#coach.author-section {
+    padding: 0 0 96px;
+    background: var(--background);
+}
+
+.coach-manifesto {
+    background: var(--surface-alt);
+    padding: 64px 40px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.coach-manifesto-text {
+    margin: 0 auto;
+    max-width: 18ch;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.coach-manifesto-text em {
+    color: var(--accent);
+    font-style: normal;
+}
+
+.coach-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: 64px;
+    padding-top: 64px;
+    align-items: start;
+}
+
+.coach-photo-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coach-photo-wrap {
+    position: relative;
+    max-width: 380px;
+}
+
+.coach-photo-wrap::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--accent);
+}
+
+.author-photo {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    padding-left: 16px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 18%;
+    filter: none;
+    border: none;
+    border-radius: 0;
+}
+
+.coach-meta {
+    padding-left: 16px;
+}
+
+.coach-name {
+    margin: 0 0 6px;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+    line-height: 0.96;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.coach-title {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.coach-cred-column {
+    min-width: 0;
+}
+
+.cred-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.cred-item {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 0 20px;
+    align-items: start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cred-copy {
+    display: flex;
+    flex-direction: column;
+}
+
+.cred-year {
+    padding-top: 3px;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.cred-title {
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cred-note {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+.coach-stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.coach-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.coach-stat-value {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+#coach .counter,
+.coach-stat-plus {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.coach-stat-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    #coach.author-section {
+        padding: 0 0 72px;
+    }
+
+    .coach-manifesto {
+        padding: 48px 20px;
+    }
+
+    .coach-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 48px;
+    }
+
+    .coach-photo-wrap,
+    .author-photo {
+        max-width: none;
+    }
+
+    .cred-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 18px 0;
+    }
+
+    .coach-stats-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+}

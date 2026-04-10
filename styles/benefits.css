@@ -1,0 +1,183 @@
+/* ---------------------------------
+   Cases Carousel
+--------------------------------- */
+
+.cases-section {
+    padding: 96px 0;
+    background: var(--background);
+}
+
+.cases-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.cases-section .prev-btn,
+.cases-section .next-btn {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-strong);
+    border-radius: 0;
+    background: var(--surface-alt);
+    color: var(--text-primary);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cases-section .prev-btn:hover,
+    .cases-section .next-btn:hover {
+        background: var(--accent);
+        color: #0a0a0a;
+        border-color: var(--accent);
+    }
+}
+
+.cases-section .carousel-track {
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+}
+
+.cases-section .carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.cases-section .carousel-card {
+    min-width: 320px;
+    flex: 0 0 320px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.case-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.case-goal {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border-strong);
+}
+
+.case-result {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.case-result-num {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.case-result-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.case-desc {
+    margin: 0;
+    flex: 1;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+.case-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.case-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.carousel-progress-track {
+    position: relative;
+    height: 2px;
+    margin-top: 24px;
+    background: var(--border);
+}
+
+.carousel-progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--accent);
+    transition:
+        width 200ms ease,
+        left 200ms ease;
+}
+
+@media (max-width: 768px) {
+    .cases-section {
+        padding: 72px 0;
+    }
+
+    .cases-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cases-section .carousel-card {
+        min-width: 320px;
+        flex-basis: 320px;
+        padding: 28px 24px;
+    }
+}
