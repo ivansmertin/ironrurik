@@ -220,12 +220,15 @@
     }
 }
 
-.social-icon img,
-.footer-social img {
+.social-icon svg,
+.footer-social svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.social-icon svg {
     width: 20px;
     height: 20px;
-    display: block;
-    filter: brightness(0) saturate(100%) invert(88%) sepia(49%) saturate(977%) hue-rotate(19deg) brightness(101%) contrast(90%);
 }
 
 .mobile-menu-meta {
