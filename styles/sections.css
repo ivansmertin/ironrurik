@@ -1,0 +1,236 @@
+/* ---------------------------------
+   Sections
+--------------------------------- */
+
+.hero-section {
+    padding: 24px 0 64px 0;
+}
+
+.author-section,
+.faq-section {
+    padding: 64px 0;
+}
+
+.section-title {
+    margin: 0 0 24px 0;
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--text-primary);
+}
+
+.section-subtitle {
+    margin: 0;
+    max-width: 720px;
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+.proof-section {
+    padding: 0;
+}
+
+.proof-strip {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.proof-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 220px;
+    padding: 20px 32px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.proof-item:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
+.proof-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.goals-section {
+    padding: 96px 0;
+    background: var(--background);
+}
+
+.goal-selector {
+    margin-top: 32px;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 0;
+}
+
+.goal-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--border);
+}
+
+.goal-tab {
+    appearance: none;
+    background: transparent;
+    border: none;
+    margin-bottom: -2px;
+    padding: 12px 24px;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition:
+        color 200ms ease,
+        border-color 200ms ease,
+        background-color 200ms ease;
+}
+
+.goal-tab.is-active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.goal-panel {
+    display: none;
+}
+
+.goal-panel.is-active {
+    display: grid;
+    gap: 20px;
+}
+
+.goal-panel-title {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 0.96;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.goal-panel-desc {
+    margin: 0;
+    max-width: 760px;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+}
+
+.goal-panel-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.goal-panel-list li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.goal-panel-list li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+}
+
+.goal-panel-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.goal-panel-meta span {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border-strong);
+    font-family: "Oswald", sans-serif;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.goal-cta-btn {
+    justify-self: start;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .proof-strip {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .proof-item {
+        min-width: 0;
+        padding: 18px 16px;
+    }
+
+    .proof-item:not(:last-child) {
+        border-right: none;
+    }
+
+    .proof-item:nth-child(odd) {
+        border-right: 1px solid var(--border);
+    }
+
+    .proof-item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .goals-section {
+        padding: 72px 0;
+    }
+
+    .goal-selector {
+        padding: 24px 20px;
+    }
+
+    .goal-tabs {
+        margin-bottom: 28px;
+    }
+
+    .goal-tab {
+        padding: 12px 16px;
+    }
+}

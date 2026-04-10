@@ -1,0 +1,10 @@
+<svg width="248" height="56" viewBox="0 0 248 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18 9V47" stroke="#FFCD02" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M18 9L9 18" stroke="#FFCD02" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 9L27 18" stroke="#FFCD02" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 26L8 36" stroke="#FFCD02" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 26L28 36" stroke="#FFCD02" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="46" y="19" fill="#FFFFFF" style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 10px; letter-spacing: 0.16em;">ЖЕЛЕЗНЫЙ</text>
+  <text x="46" y="39" fill="#FFCD02" style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.08em;">РЮРИК</text>
+</svg>

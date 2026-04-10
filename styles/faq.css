@@ -1,0 +1,129 @@
+/* ---------------------------------
+   FAQ
+--------------------------------- */
+
+#faq.faq-section {
+    padding: 96px 0;
+    background: var(--background-soft);
+}
+
+#faq .faq-intro {
+    margin-bottom: 32px;
+}
+
+#faq .faq-intro-note {
+    margin: 0;
+    max-width: 44ch;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+#faq .faq-category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 24px;
+}
+
+#faq .faq-cat-tab {
+    appearance: none;
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 0;
+    transition:
+        background-color 200ms ease,
+        color 200ms ease,
+        border-color 200ms ease;
+}
+
+#faq .faq-cat-tab.is-active {
+    background: var(--accent);
+    color: #0a0a0a;
+    border-color: var(--accent);
+}
+
+#faq .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+}
+
+#faq .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    overflow: hidden;
+}
+
+#faq .faq-item.is-open {
+    border-color: var(--accent);
+}
+
+#faq .faq-item[hidden] {
+    display: none;
+}
+
+#faq .faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#faq .faq-question::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+#faq .faq-item.is-open .faq-question::after {
+    content: "\2014";
+}
+
+#faq .faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#faq .faq-answer-inner {
+    padding: 0 24px 20px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    #faq.faq-section {
+        padding: 72px 0;
+    }
+
+    #faq .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}

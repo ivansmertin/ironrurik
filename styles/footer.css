@@ -1,0 +1,236 @@
+/* ---------------------------------
+   CTA
+--------------------------------- */
+
+#cta.cta-section {
+    background: var(--surface-alt);
+    border-top: 2px solid var(--accent);
+    padding: 80px 0;
+}
+
+#cta .cta-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: center;
+}
+
+#cta .cta-title {
+    margin: 0 0 16px;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 0.96;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+#cta .cta-desc {
+    margin: 0;
+    max-width: 480px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+#cta .cta-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#cta .cta-primary-btn {
+    min-width: 220px;
+    justify-content: center;
+}
+
+#cta .cta-sub {
+    margin: 12px 0 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+#cta .cta-social-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+#cta .cta-social-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #cta.cta-section {
+        padding: 72px 0;
+    }
+
+    #cta .cta-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    #cta .cta-primary-btn {
+        width: 100%;
+    }
+}
+
+/* ---------------------------------
+   Footer
+--------------------------------- */
+
+.site-footer {
+    background: #000000;
+    border-top: 1px solid var(--border);
+    padding-top: 0;
+}
+
+.footer-statement {
+    padding: 48px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-statement-text {
+    margin: 0 auto;
+    max-width: 28ch;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(160, 160, 160, 0.82);
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    padding: 48px 40px;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-brand-name {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+.footer-brand-sub {
+    margin: 6px 0 0;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav a {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.footer-nav a:hover {
+    color: var(--accent);
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.footer-phone {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.footer-social {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    text-decoration: none;
+}
+
+.footer-social img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    filter: none;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-statement,
+    .footer-main,
+    .footer-legal {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
