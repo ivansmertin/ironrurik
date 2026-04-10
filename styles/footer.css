@@ -190,11 +190,11 @@
     text-decoration: none;
 }
 
-.footer-social img {
+.footer-social svg {
     width: 18px;
     height: 18px;
     display: block;
-    filter: brightness(0) saturate(100%) invert(88%) sepia(49%) saturate(977%) hue-rotate(19deg) brightness(101%) contrast(90%);
+    flex-shrink: 0;
 }
 
 .footer-legal {
